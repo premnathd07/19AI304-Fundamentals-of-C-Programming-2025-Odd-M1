@@ -32,21 +32,23 @@ To build a C program that prints integer, float,character, and string literals o
 #include <stdio.h>
 
 int main() {
-    printf("Integer literal: %d (size: %lu bytes)\n", 10, sizeof(10));
-    printf("Float literal: %f (size: %lu bytes)\n", 3.14f, sizeof(3.14f));
-    printf("Character literal: %c (size: %lu bytes)\n", 'A', sizeof('A'));
-    printf("String literal: %s (size: %lu bytes)\n", "Hello C", sizeof("Hello C"));
+    int intLiteral = 10;
+    float floatLiteral = 3.14;
+    char charLiteral = 'A';
+    char stringLiteral[] = "Hello C";
+
+    printf("Integer literal: %d, Size: %lu bytes\n", intLiteral, sizeof(intLiteral));
+    printf("Float literal: %f, Size: %lu bytes\n", floatLiteral, sizeof(floatLiteral));
+    printf("Character literal: %c, Size: %lu bytes\n", charLiteral, sizeof(charLiteral));
+    printf("String literal: %s, Size: %lu bytes\n", stringLiteral, sizeof(stringLiteral));
 
     return 0;
 }
 ```
 # Output:
-```
-Integer literal: 10 (size: 4 bytes)
-Float literal: 3.140000 (size: 4 bytes)
-Character literal: A (size: 1 bytes)
-String literal: Hello C (size: 7 bytes)
-```
+
+<img width="446" height="154" alt="image" src="https://github.com/user-attachments/assets/0426c8f2-1bb4-4a5c-8387-dd1b011f7802" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -82,21 +84,18 @@ Thus, the program was implemented and executed successfully, and the required ou
 ```
 #include <stdio.h>
 #define PI 3.14159
-
 int main() {
     const int DAYS = 7;
 
-    printf("Value of macro constant PI = %f\n", PI);
-    printf("Value of constant variable DAYS = %d\n", DAYS);
+    printf("Value of macro constant PI: %f\n", PI);
+    printf("Value of constant variable DAYS: %d\n", DAYS);
 
     return 0;
 }
 ```
 # Output:
-```
-Value of macro constant PI = 3.141590
-Value of constant variable DAYS = 7
-```
+<img width="420" height="202" alt="image" src="https://github.com/user-attachments/assets/7ae05f54-c159-4ce5-b935-2af7b8f6be45" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -124,28 +123,21 @@ Thus, the program was implemented and executed successfully, and the required ou
 # Program:
 ```
 #include <stdio.h>
-
 int main() {
-    int a = 10;
-    float b = 5.5f;
-    double c = 12.3456;
-    char d = 'Z';
-
-    printf("Integer: %d\n", a);
-    printf("Float: %f\n", b);
-    printf("Double: %lf\n", c);
-    printf("Character: %c\n", d);
-
+    int intVar = 25;
+    float floatVar = 5.75;
+    double doubleVar = 19.99;
+    char charVar = 'G';
+    printf("Integer value: %d\n", intVar);
+    printf("Float value: %f\n", floatVar);
+    printf("Double value: %lf\n", doubleVar);
+    printf("Character value: %c\n", charVar);
     return 0;
 }
 ```
 # Output:
-```
-Integer: 10
-Float: 5.500000
-Double: 12.345600
-Character: Z
-```
+<img width="399" height="268" alt="image" src="https://github.com/user-attachments/assets/796f2afb-34f0-48e1-8d51-e02a59afcfba" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd
@@ -188,46 +180,35 @@ Thus, the program was implemented and executed successfully, and the required ou
 # Program:
 ```
 #include <stdio.h>
-
 int main() {
     int a, b;
-
     printf("Enter two integers: ");
     scanf("%d %d", &a, &b);
-
-    printf("Addition: %d\n", a + b);
-    printf("Subtraction: %d\n", a - b);
-    printf("Multiplication: %d\n", a * b);
-    printf("Division: %d\n", a / b);
-    printf("Remainder: %d\n", a % b);
-
-    printf("Bitwise AND: %d\n", a & b);
-    printf("Bitwise OR: %d\n", a | b);
-    printf("Bitwise XOR: %d\n", a ^ b);
-    printf("Left Shift (a << b): %d\n", a << b);
-    printf("Right Shift (a >> b): %d\n", a >> b);
-    printf("Bitwise NOT of a: %d\n", ~a);
-    printf("Bitwise NOT of b: %d\n", ~b);
-
+    printf("Arithmetic Operations:\n");
+    printf("Sum (a + b) = %d\n", a + b);
+    printf("Difference (a - b) = %d\n", a - b);
+    printf("Product (a * b) = %d\n", a * b);
+    if(b != 0) {
+        printf("Quotient (a / b) = %d\n", a / b);
+        printf("Remainder (a %% b) = %d\n", a % b);
+    } else {
+        printf("Division by zero is not allowed.\n");
+    }
+    printf("\nBitwise Operations:\n");
+    printf("AND (a & b) = %d\n", a & b);
+    printf("OR (a | b) = %d\n", a | b);
+    printf("XOR (a ^ b) = %d\n", a ^ b);
+    printf("Left shift (a << b) = %d\n", a << b);
+    printf("Right shift (a >> b) = %d\n", a >> b);
+    printf("Bitwise NOT of a (~a) = %d\n", ~a);
+    printf("Bitwise NOT of b (~b) = %d\n", ~b);
     return 0;
 }
+
 ```
 # Output:
-```
-Enter two integers: 5 3
-Addition: 8
-Subtraction: 2
-Multiplication: 15
-Division: 1
-Remainder: 2
-Bitwise AND: 1
-Bitwise OR: 7
-Bitwise XOR: 6
-Left Shift (a << b): 40
-Right Shift (a >> b): 0
-Bitwise NOT of a: -6
-Bitwise NOT of b: -4
-```
+<img width="451" height="680" alt="image" src="https://github.com/user-attachments/assets/551e72b7-c869-4fd6-b118-f0ab6cbb7133" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -275,39 +256,21 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 # Program:
 ```
-#include <stdio.h>
-
-int main() {
+#include<stdio.h>
+int main(){
     char ch;
-
     printf("Enter a character: ");
-    scanf("%c", &ch);
-
-    (ch >= '0' && ch <= '9') ?
-        printf("Digit\n") :
-    ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) ?
-        ((ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||
-          ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U') ?
-            printf("Vowel\n") : printf("Consonant\n")) :
-        printf("Special Symbol\n");
-
+    scanf("%c",&ch);
+    (ch>='0' && ch<='9')?printf("Digit\n"):
+    ((ch>='A' && ch<='Z')||(ch>='a' && ch<='z'))?
+    ((ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'||ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')?printf("Vowel\n"):printf("Consonant\n"))
+    :printf("Special Symbol\n");
     return 0;
 }
 ```
 # Output:
-```
-Input: a
-character: Vowel
+<img width="405" height="248" alt="image" src="https://github.com/user-attachments/assets/f76aae54-f312-4786-be4d-86611fb406f7" />
 
-Input: G
-character: Consonant
-
-Input: 8
-character: Digit
-
-Input: @
-character: Special Symbol
-```
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
